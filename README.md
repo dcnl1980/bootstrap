@@ -8,7 +8,7 @@
 - Tailwind CSS 2
 - Laravel Livewire
 - Jetstream
-- Laravel Telescope (local-only)
+- Laravel Telescope (local-only @ /telescope)
 - Laravel Debug Bar (barryvdh/laravel-debugbar)
 - Laravel IDE Helper (barryvdh/laravel-ide-helper)
 
