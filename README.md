@@ -1,4 +1,6 @@
-## Laravel Bootstrap 5, Tailwind, Livewire and Jetstream
+## Laravel 8, Bootstrap 5, Tailwind CSS, Livewire and Jetstream
+
+#### Including a nice UI/UX for all your applications
 
 ## Preinstalled with
 
@@ -22,3 +24,8 @@ php artisan db:seed
 php artisan storage:link
 php artisan key:generate
 ```
+
+## Todo
+
+- Adding a nice Dashboard
+- 404 error change

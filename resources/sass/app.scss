@@ -1,14 +1,22 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=fallback');
 
-// Variables
-@import 'variables';
+// Bootstrap 5
+// To enable Bootstrap 5, just uncomment these lines
+//@import 'variables';
+//@import '~bootstrap/scss/bootstrap';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// Theme
+@import '_utilities.scss';
+@import 'theme.scss';
 
 // FontAwesome
 @import '~@fortawesome/fontawesome-free/css/fontawesome';
 @import '~@fortawesome/fontawesome-free/css/regular';
 @import '~@fortawesome/fontawesome-free/css/solid';
 @import '~@fortawesome/fontawesome-free/css/brands';
+
+// See Alpine.js: https://github.com/alpinejs/alpine#x-cloak
+[x-cloak=""] {
+    display: none;
+}
