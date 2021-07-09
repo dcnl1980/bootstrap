@@ -1,14 +1,16 @@
 <div>
     <!-- Sidebar -->
-    <div class="lg:w-64">
+    <nav class="lg:w-64 ">
 
         <!-- Sidebar backdrop (mobile only) -->
         <div class="fixed inset-0 bg-gray-900 bg-opacity-30 z-40 lg:hidden lg:z-auto transition-opacity duration-200" :class="sidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'" aria-hidden="true" x-cloak></div>
 
         <!-- Sidebar -->
-        <nav
+
+
+        <div
             id="sidebar"
-            class="absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 transform h-screen overflow-y-scroll lg:overflow-y-auto no-scrollbar w-64 flex-shrink-0 bg-gray-800 p-4 transition-transform duration-200 ease-in-out"
+            class="flex flex-col flex-grow absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 transform h-screen overflow-y-scroll lg:overflow-y-auto no-scrollbar w-64 flex-shrink-0 bg-gray-800 p-4 transition-transform duration-200 ease-in-out"
             :class="sidebarOpen ? 'translate-x-0' : '-translate-x-64'"
             @click.away="sidebarOpen = false"
             @keydown.escape.window="sidebarOpen = false"
@@ -36,7 +38,7 @@
             </div>
 
             <!-- Links -->
-            <div>
+            <div class="flex-grow flex flex-col">
                 <h3 class="text-xs uppercase text-gray-500 font-semibold pl-3">Pages</h3>
                 <ul class="mt-3">
                     <!-- Dashboard -->
@@ -51,6 +53,24 @@
                     </li>
                 </ul>
             </div>
-        </nav>
-    </div>
+
+            <!-- Bottom informations -->
+            <div class="flex-shrink-0 block w-full">
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <x-jet-dropdown-link href="{{ route('logout') }}"
+                                         class="group  border-transparent flex items-center text-sm font-medium text-gray-600 hover:text-gray-500 hover:bg-gray-700"
+                                         onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                        <i class="far fa-sign-out-alt">
+                        {{ __('Log Out') }}</i>
+                    </x-jet-dropdown-link>
+                </form>
+
+                <span class="text-sm">Version 1.0</span>
+            </div>
+
+        </div>
+
+    </nav>
 </div>

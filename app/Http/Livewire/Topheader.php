@@ -8,6 +8,6 @@ class Topheader extends Component
 {
     public function render()
     {
-        return view('layouts.topheader');
+        return view('layouts.components.topheader');
     }
 }

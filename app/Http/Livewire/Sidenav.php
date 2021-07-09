@@ -8,6 +8,6 @@ class Sidenav extends Component
 {
     public function render()
     {
-        return view('layouts.sidenav');
+        return view('layouts.components.sidenav');
     }
 }
